@@ -1,5 +1,5 @@
  body{
-      background-image: url(Images/playlistBackground.png);
+      background-image: url(../Images/playlistBackground.png);
      background-size: 100%;
      background-repeat: no-repeat;
      background-attachment: fixed;
@@ -8,7 +8,7 @@
   }
 
 .musicInfoBox {
-    background-color: rgba(46, 46, 46, 0.89);
+    background-color: rgba(46, 46, 46, 0.75);
     width: 350px;
     height: 80px;
     margin-top: 25px;
@@ -50,21 +50,25 @@ border-radius: 5px;
 
 /*My Video Player and Control Attributes */
 #video_player_box {
-    width: 100%;
-    background-color: rgba(46, 46, 46, 0.89);
-    margin-top: 605px;
+    width: 1359px;
+    height: 80px;
+    background-color: rgba(46, 46, 46, 0.75);
+    margin-top: 594px;
     margin-bottom: auto;
-    margin-left: auto;
+    margin-left: -7px;
     margin-right: auto;
     bottom: 0px;
     box-shadow: 0px 4px 5px rgb(41, 41, 41);
 
 }
+
 #video_controls_bar {
-    background-color: rgba(46, 46, 46, 0.89);
+    background-color: transparent;
     padding: 10px;
     color:#65737e;
+    position: relative;
 }
+
 #video_controls_bar:hover {
     opacity: 0.9;
     transition: 0.15s;
@@ -72,23 +76,22 @@ border-radius: 5px;
 
 #playpausebtn {
     color: ghostwhite;
-    margin-left: 50px;
-    background: inherit;
+    margin-left: 650px;
+    background: transparent;
     border:0 none;
     cursor:pointer;
     padding: 5px;
     width: 60px;
     font-size: 15px;
+    position: relative;
 }
 
 #playpausebtn:hover {
-
     padding: 5px;
     width: 60px;
     background: #46484d;
-
--webkit-border-radius: 5px;
-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     font-size: 15px;
     box-shadow: 0px 4px 5px rgb(41, 41, 41);
     text-align: center;
@@ -99,59 +102,63 @@ border-radius: 5px;
     color: ghostwhite;
     border:0 none;
     cursor:pointer;
-    background: inherit;
+    background: transparent;
     padding: 5px;
     width: 60px;
     font-size: 15px;
+    margin-left: 350px;
 }
 
 #mutebtn:hover {
-
     padding: 5px;
-
     background: #46484d;
-
     -webkit-border-radius: 5px;
     border-radius: 5px;
     font-size: 15px;
-   box-shadow: 0px 4px 5px rgb(41, 41, 41);
+    box-shadow: 0px 4px 5px rgb(41, 41, 41);
 }
 #seekslider {
     padding-right: 10px;
     padding-left: 10px;
-    width: 1317px;
-    height: 6px;
+    width: 1330px;
+    height: 2px;
     opacity: 0.8;
-    background: #ff0000;
-    margin-top: 10px;
+    background: rgb(255, 255, 255);
+    margin-top: 20px;
 }
+
 #seekslider:hover {
      opacity: 1;
       -webkit-transition-timing-function: ease-out;
 }
+
 #volumeslider {
      width: 80px;
-     padding: 3px;
+     padding: 5px;
+    background-color: ghostwhite;
 }
 #curtimetext {
     color: ghostwhite;
     font-size: 12px;
 }
+
 #durtimetext {
     color: gray;
     font-size: 12px;
 }
+
 input[type='range'] {
     -webkit-appearance: none !important;
-    background: #000;
-    border: #666 solid 1px;
+    background: transparent;
     height: 1px;
 }
+
 input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    background: rgba(165, 165, 165, 0.77);
+    background: transparent;
     height: 15px;
     width: 15px;
     border-radius: 100%;
+    border: 2px solid rgb(255, 255, 255);
     cursor: pointer;
 }
