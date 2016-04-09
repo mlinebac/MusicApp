@@ -1,7 +1,23 @@
  body{
-      background: white;
+      background-image: url(Images/playlistBackground.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
 	  font-family: "arial";
   }
+
+.musicInfoBox {
+    background-color: rgba(46, 46, 46, 0.89);
+    width: 350px;
+    height: 80px;
+    margin-top: 25px;
+    margin-left: 0px;
+    margin-bottom: -120px;
+    margin-right: auto;
+    position: relative;
+    box-shadow: 0px 4px 5px rgb(41, 41, 41);
+}
 
 input[type=text] {
     padding: 5px;
@@ -35,7 +51,7 @@ border-radius: 5px;
 /*My Video Player and Control Attributes */
 #video_player_box {
     width: 100%;
-    background: #000;
+    background-color: rgba(46, 46, 46, 0.89);
     margin-top: 605px;
     margin-bottom: auto;
     margin-left: auto;
@@ -45,7 +61,7 @@ border-radius: 5px;
 
 }
 #video_controls_bar {
-    background-color: rgb(57, 57, 57);
+    background-color: rgba(46, 46, 46, 0.89);
     padding: 10px;
     color:#65737e;
 }
