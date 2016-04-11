@@ -10,7 +10,7 @@
 		app.use(express.static(__dirname));
 		app.use(bodyParser.urlencoded({ extended: true}));
 
-		mongoose.connect("mongodb://localhost/warehouse/musicWarehouse");
+		mongoose.connect("mongodb://localhost/musicWarehouse");
 
 		var ArtistSchema = mongoose.Schema({
 				"name" : String,
