@@ -1,11 +1,11 @@
-(function(){
+(function () {
 	"use strict";
 
-	var main = function(){
+	var main = function () {
 		var express = require("express"),
 				bodyParser = require("body-parser"),
 				mongoose = require("mongoose"),
-				app = express();
+				app = new express();
 
 		app.use(express.static(__dirname));
 		app.use(bodyParser.urlencoded({ extended: true}));
@@ -19,34 +19,35 @@
 				"likes" : Number,
 				"dislikes" : Number});
 
-		var Item = mongoose.model("Artist", ArtistSchema);
+		var Artist = mongoose.model("Artist", ArtistSchema);
 
-		app.get("/getArtist", function(req,res){
-			Artist.find(req.query, function(err, artist){
-				if(err !== null){
-					res.send("ERROR");
-					} else {
-							res.send(artist);
-					}
-			});
+		app.use(function(req, res, next){
+			console.log('%s %s', req.method, req.url);
+			next();
 		});
-		app.post("/putArtist", function(req,res){
-			var newArtist = new Artist({"name" : req.body.name,
-																 	"genre" : req.body.genre,
-																 	"album" : req.body.album,
-																 	"likes" : req.body.likes,
-																 	"dislikes" : req.body.dislikes});
-			newArtist.save(function(err, result){
-				if (err !== null) {
+
+		app.get("/getArtist", function(req, res, next) {
+			Artist.find(req.query, function(err, artist) {
+				if(err) {
 					console.log(err);
-					res.send("ERROR");
 					} else {
-							res.send("Artist imported and uploaded");
+							res.json(artist);
 					}
+				res.end();
 			});
 		});
+
+		app.post("/putArtist", function(req, res, next) {
+			var newArtist = new Artist(req.body);
+			newArtist.save(function(error, data) {
+				if (error) console.log(error);
+			});
+			res.end();
+		});
+
 		app.listen(3000);
 		console.log("listening on port 3000");
+
 	};
 
 	main();
