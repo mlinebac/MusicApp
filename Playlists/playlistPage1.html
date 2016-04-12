@@ -1,24 +1,30 @@
 <!doctype html>
 <html lang="en" ng-app="music">
-	<head>
-		<title>Playlist</title>
-		<link rel="stylesheet" type="text/css" href="playlist.css">
-	</head>
-	<body>
-        <section class="musicInfoBox"></section>
-        <div id="video_player_box">
-            <audio id="my_video"  autoplay>
-                <source src="Images/tester.mp4" type="video/mp4">
-            </audio>
-            <div id="video_controls_bar">
-                <div style=" margin-top: -20px; margin-left: -10px;">
-                    <input id="seekslider" type="range" min="0" max="100" value="0" steps="1">
-                </div>
-                <span id="curtimetext"></span> / <span id="durtimetext"></span>
-                <button id="playpausebtn">	&nbsp &#9612 &#9612</button>
-                <button id="mutebtn">&#128266</button>
-                <input id="volumeslider" type="range" min="0" max="100" value="100" steps="1">
+
+<head>
+    <title>Playlist</title>
+    <link rel="stylesheet" type="text/css" href="playlist.css">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="playlist.js"></script>
+</head>
+
+<body>
+    <section class="musicInfoBox"></section>
+    <div id="video_player_box">
+        <audio id="my_video" autoplay>
+            <source src="../Music/DJ%20Snake%20ft.%20Bipolar%20Sunshine%20-%20Middle.mp3" type="audio/mp3">
+        </audio>
+        <div id="video_controls_bar">
+            <div style=" margin-top: -20px; margin-left: -10px;">
+                <input id="seekslider" type="range" min="0" max="100" value="0" steps="1">
             </div>
+
+            <span id="curtimetext"></span> / <span id="durtimetext"></span>
+            <button id="playpausebtn"> &nbsp &#9612 &#9612</button>
+            <button id="mutebtn">&#128266</button>
+            <input id="volumeslider" type="range" min="0" max="100" value="100" steps="1">
         </div>
-	</body>
+    </div>
+</body>
+
 </html>
