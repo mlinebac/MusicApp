@@ -1,6 +1,7 @@
  body{
       background: rgba(82, 149, 242, 0.89);
 	  font-family: "arial";
+     overflow: hidden;
   }
 
 .musicInfoBox {
@@ -44,39 +45,37 @@ border-radius: 5px;
     color:#65737e;
 }
 
-/*My Video Player and Control Attributes */
-#video_player_box {
-    width: 1359px;
-    height: 80px;
-    background: rgba(46, 46, 46, 0.75); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(46, 46, 46, 0.75), transparent); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(46, 46, 46, 0.75), transparent); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(46, 46, 46, 0.75), transparent); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(46, 46, 46, 0.75), transparent); /* Standard syntax */
+/*My audioPlayer Player and Control Attributes */
+#audioPlayer_player_box {
+    width: 150%;
+
+    height: 100px;
+    background: rgb(51, 50, 50); /* For browsers that do not support gradients */
+
     margin-top: 594px;
     margin-bottom: auto;
-    margin-left: -7px;
+    margin-left: -10px;
     margin-right: auto;
     bottom: 0px;
     box-shadow: 0px -5px 5px -5px rgb(41, 41, 41);*/
 
 }
 
-#video_controls_bar {
+#audioPlayer_controls_bar {
     background-color: transparent;
     padding: 10px;
     color:#65737e;
     position: relative;
 }
 
-#video_controls_bar:hover {
+#audioPlayer_controls_bar:hover {
     opacity: 0.9;
     transition: 0.15s;
 }
 
 #playpausebtn {
     color: ghostwhite;
-    margin-left: 650px;
+    margin-left: 550px;
     background: transparent;
     border:0 none;
     cursor:pointer;
@@ -119,12 +118,13 @@ border-radius: 5px;
 }
 #seekslider {
     padding-right: 10px;
-    padding-left: 10px;
-    width: 1330px;
+    padding-left: 15px;
+    width: 70%;
     height: 2px;
     opacity: 0.8;
     background: rgb(255, 255, 255);
     margin-top: 20px;
+    margin-left: -5px;
 }
 
 #seekslider:hover {
