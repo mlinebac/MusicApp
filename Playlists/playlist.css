@@ -1,164 +1,201 @@
- body{
-      background: rgba(82, 149, 242, 0.89);
-	  font-family: "arial";
+ body {
+     background: rgba(82, 149, 242, 0.89);
+     font-family: "arial";
      overflow: hidden;
-  }
+ }
 
-.musicInfoBox {
-    background-color: rgba(46, 46, 46, 0.75);
-    width: 350px;
-    height: 80px;
-    margin-top: 25px;
-    margin-left: 0px;
-    margin-bottom: -120px;
-    margin-right: auto;
-    position: relative;
-    box-shadow: 0px 4px 5px rgb(41, 41, 41);
-}
+ @font-face {
+     font-family: myFont;
+     src: url('fonts/DrukWide-Heavy.ttf');
+ }
 
-input[type=text] {
-    padding: 5px;
-    background: #46484d;
-    border:0 none;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    box-shadow: 0px 4px 5px rgba(51, 48, 48, 0.83);
-    color:#65737e;
-}
+ section {
+     display: inline-block;
+     margin-top: -50px;
+     margin-bottom: -600px;
+     margin-left: 200px;
+     margin-right: auto;
+ }
 
-input[type=text]:focus {
-    border-color:#333;
-}
-input[type=submit] {
-   float: right;
-   padding: 5px;
-    width: 80px;
-    height: 40px;
-background: #46484d;
-border:0 none;
-cursor:pointer;
--webkit-border-radius: 5px;
-border-radius: 5px;
-    font-size: 15px;
-   box-shadow: 0px 4px 5px rgba(51, 48, 48, 0.83);
-    color:#65737e;
-}
+ #genreBox1 {
+     top: 20px;
+     height: 200px;
+     width: 440px;
+     margin-bottom: 50px;
+     margin-left: 15px;
+     background-color: rgba(46, 41, 41, 0.93);
+     float: left;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
 
-/*My audioPlayer Player and Control Attributes */
-#audioPlayer_player_box {
-    width: 150%;
+ #genreBox2 {
+     top: 20px;
+     height: 200px;
+     width: 440px;
+     margin-bottom: 50px;
+     margin-left: 15px;
+     background-color: rgba(46, 41, 41, 0.93);
+     float: left;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
 
-    height: 100px;
-    background: rgb(51, 50, 50); /* For browsers that do not support gradients */
+ #genreBox3 {
+     top: 20px;
+     height: 200px;
+     width: 440px;
+     margin-bottom: 100px;
+     margin-left: 15px;
+     background-color: rgba(46, 41, 41, 0.93);
+     float: left;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
 
-    margin-top: 594px;
-    margin-bottom: auto;
-    margin-left: -10px;
-    margin-right: auto;
-    bottom: 0px;
-    box-shadow: 0px -5px 5px -5px rgb(41, 41, 41);*/
+ #genreBox4 {
+     top: 20px;
+     height: 200px;
+     width: 440px;
+     margin-bottom: 100px;
+     margin-left: 15px;
+     background-color: rgba(46, 41, 41, 0.93);
+     float: left;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
 
-}
-
-#audioPlayer_controls_bar {
-    background-color: transparent;
-    padding: 10px;
-    color:#65737e;
-    position: relative;
-}
-
-#audioPlayer_controls_bar:hover {
-    opacity: 0.9;
-    transition: 0.15s;
-}
-
-#playpausebtn {
-    color: ghostwhite;
-    margin-left: 550px;
-    background: transparent;
-    border:0 none;
-    cursor:pointer;
-    padding: 5px;
-    width: 60px;
-    font-size: 15px;
-    position: relative;
-}
-
-#playpausebtn:hover {
-    padding: 5px;
-    width: 60px;
-    background: #46484d;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ #genreBox1,
+ #genreBox2,
+ #genreBox3,
+ #genreBox4 h1 {
     text-align: center;
-}
+     color: white;
+ }
 
-#mutebtn {
-    margin-left: 900px;
-    color: ghostwhite;
-    border:0 none;
-    cursor:pointer;
-    background: transparent;
-    padding: 5px;
-    width: 60px;
-    font-size: 15px;
-    margin-left: 350px;
-}
+ .musicInfoBox {
+     background-color: rgba(46, 46, 46, 0.75);
+     width: 350px;
+     height: 80px;
+     margin-top: 25px;
+     margin-left: 0px;
+     margin-bottom: -120px;
+     margin-right: auto;
+     position: relative;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
+ /*My audioPlayer Player and Control Attributes */
 
-#mutebtn:hover {
-    padding: 5px;
-    background: #46484d;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    box-shadow: 0px 4px 5px rgb(41, 41, 41);
-}
-#seekslider {
-    padding-right: 10px;
-    padding-left: 15px;
-    width: 70%;
-    height: 2px;
-    opacity: 0.8;
-    background: rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-left: -5px;
-}
+ #audioPlayer_player_box {
+     width: 150%;
+     height: 100px;
+     background: rgb(51, 50, 50);
+     /* For browsers that do not support gradients */
+     margin-top: 594px;
+     margin-bottom: auto;
+     margin-left: -10px;
+     margin-right: auto;
+     bottom: 0px;
+     box-shadow: 0px -5px 5px -5px rgb(41, 41, 41);
+     */
+ }
 
-#seekslider:hover {
+ #audioPlayer_controls_bar {
+     background-color: transparent;
+     padding: 10px;
+     color: #65737e;
+     position: relative;
+ }
+
+ #audioPlayer_controls_bar:hover {
+     opacity: 0.9;
+     transition: 0.15s;
+ }
+
+ #playpausebtn {
+     color: ghostwhite;
+     margin-left: 550px;
+     background: transparent;
+     border: 0 none;
+     cursor: pointer;
+     padding: 5px;
+     width: 60px;
+     font-size: 15px;
+     position: relative;
+ }
+
+ #playpausebtn:hover {
+     padding: 5px;
+     width: 60px;
+     background: #46484d;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     font-size: 15px;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     text-align: center;
+ }
+
+ #mutebtn {
+     margin-left: 900px;
+     color: ghostwhite;
+     border: 0 none;
+     cursor: pointer;
+     background: transparent;
+     padding: 5px;
+     width: 60px;
+     font-size: 15px;
+     margin-left: 350px;
+ }
+
+ #mutebtn:hover {
+     padding: 5px;
+     background: #46484d;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     font-size: 15px;
+     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+ }
+
+ #seekslider {
+     padding-right: 10px;
+     padding-left: 15px;
+     width: 70%;
+     height: 2px;
+     opacity: 0.8;
+     background: rgb(255, 255, 255);
+     margin-top: 20px;
+     margin-left: -5px;
+ }
+
+ #seekslider:hover {
      opacity: 1;
-      -webkit-transition-timing-function: ease-out;
-}
+     -webkit-transition-timing-function: ease-out;
+ }
 
-#volumeslider {
+ #volumeslider {
      width: 80px;
      padding: 5px;
-    background-color: ghostwhite;
-}
-#curtimetext {
-    color: white;
-    font-size: 12px;
-}
+     background-color: ghostwhite;
+ }
 
-#durtimetext {
-    color: gray;
-    font-size: 12px;
-}
+ #curtimetext {
+     color: white;
+     font-size: 12px;
+ }
 
-input[type='range'] {
-    -webkit-appearance: none !important;
-    background: transparent;
-    height: 1px;
-}
+ #durtimetext {
+     color: gray;
+     font-size: 12px;
+ }
 
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background: transparent;
-    height: 15px;
-    width: 15px;
-    border-radius: 100%;
-    border: 2px solid rgb(155, 205, 255);
-    cursor: pointer;
-}
+ input[type='range'] {
+     -webkit-appearance: none !important;
+     background: transparent;
+     height: 1px;
+ }
+
+ input[type='range']::-webkit-slider-thumb {
+     -webkit-appearance: none !important;
+     background: transparent;
+     height: 15px;
+     width: 15px;
+     border-radius: 100%;
+     border: 2px solid rgb(155, 205, 255);
+     cursor: pointer;
+ }
