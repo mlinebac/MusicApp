@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   './Playlists/playlistAction',
+1 verbose cli   '--save' ]
+2 info using npm@3.3.12
+3 info using node@v5.5.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData ./Playlists/playlistAction
+8 silly fetchOtherPackageData ./Playlists/playlistAction
+9 silly cache add args [ './Playlists/playlistAction', null ]
+10 verbose cache add spec ./Playlists/playlistAction
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: './Playlists/playlistAction',
+11 silly cache add   scope: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: './Playlists/playlistAction',
+11 silly cache add   spec: 'C:\\Users\\matt\\Desktop\\Projects\\CSCI344_WebTechnologies_FinalProjectSpring2016\\Playlists\\playlistAction',
+11 silly cache add   type: 'local' }
+12 error addLocal Could not install C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction
+13 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction'
+13 silly fetchPackageMetaData     at Error (native)
+13 silly fetchPackageMetaData  error for ./Playlists/playlistAction { [Error: ENOENT: no such file or directory, open 'C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction']
+13 silly fetchPackageMetaData   errno: -4058,
+13 silly fetchPackageMetaData   code: 'ENOENT',
+13 silly fetchPackageMetaData   syscall: 'open',
+13 silly fetchPackageMetaData   path: 'C:\\Users\\matt\\Desktop\\Projects\\CSCI344_WebTechnologies_FinalProjectSpring2016\\Playlists\\playlistAction' }
+14 silly rollbackFailedOptional Starting
+15 silly rollbackFailedOptional Finishing
+16 silly runTopLevelLifecycles Starting
+17 silly runTopLevelLifecycles Finishing
+18 silly install printInstalled
+19 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction'
+19 verbose stack     at Error (native)
+20 verbose cwd C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016
+21 error Windows_NT 10.0.10586
+22 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "./Playlists/playlistAction" "--save"
+23 error node v5.5.0
+24 error npm  v3.3.12
+25 error path C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction
+26 error code ENOENT
+27 error errno -4058
+28 error syscall open
+29 error enoent ENOENT: no such file or directory, open 'C:\Users\matt\Desktop\Projects\CSCI344_WebTechnologies_FinalProjectSpring2016\Playlists\playlistAction'
+29 error enoent This is most likely not a problem with npm itself
+29 error enoent and is related to npm not being able to find a file.
+30 verbose exit [ -4058, true ]
