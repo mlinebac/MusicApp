@@ -20,29 +20,25 @@
 				"likes" : Number,
 				"dislikes" : Number});
 
-		var HipHopArtist = mongoose.model("HipHopArtist", ArtistSchema),
-				RockArtist = mongoose.model("RockArtist", ArtistSchema),
-				PopArtist = mongoose.model("PopArtist", ArtistSchema),
-				CountryArtist = mongoose.model("CountryArtist", ArtistSchema);
+		var HipHopPlaylist = mongoose.model("HipHopPlaylist", ArtistSchema),
+				RockPlaylist = mongoose.model("RockPlaylist", ArtistSchema),
+				PopPlaylist = mongoose.model("PopPlaylist", ArtistSchema),
+				CountryPlaylist = mongoose.model("CountryPlaylist", ArtistSchema);
 		
 		for(var i = 0; i < artists.hipHop.length; i++){
-			var newHipHopArtist = new HipHopArtist(artists.hipHop[i]);
-				newHipHopArtist.save(newHipHopArtist);
-			}
+			HipHopPlaylist(artists.hipHop[i]).save(HipHopPlaylist);
+		}
 
 		for(var i = 0; i < artists.rock.length; i++){
-			var newRockArtist = new RockArtist(artists.rock[i]);
-				newRockArtist.save(newRockArtist);
+			RockPlaylist(artists.rock[i]).save(RockPlaylist);
 		}
 		
 		for(var i = 0; i < artists.pop.length; i++){
-			var newPopArtist = new PopArtist(artists.pop[i]);
-				newPopArtist.save(newPopArtist);
+			PopPlaylist(artists.pop[i]).save(PopPlaylist);
 		}
 
 		for(var i = 0; i < artists.country.length; i++){
-			var newCountryArtist = new CountryArtist(artists.country[i]);
-				newCountryArtist.save(newCountryArtist);
+			CountryPlaylist(artists.country[i]).save(CountryPlaylist);
 		}
 		
 		app.listen(3000);
