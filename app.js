@@ -7,12 +7,8 @@
 				mongoose = require("mongoose"),
 			  artists = require("./artists"),
 				app = new express();
-		
-		
-		console.log(artists.rock);
 				
-
-		app.use(express.static(__dirname + "/Playlists/playlistPage1.html"));
+		app.use(express.static(__dirname));
 		app.use(bodyParser.urlencoded({ extended: true}));
 	
 		mongoose.connect("mongodb://localhost/music");
@@ -24,11 +20,30 @@
 				"likes" : Number,
 				"dislikes" : Number});
 
-		var RockArtist = mongoose.model("RockArtist", ArtistSchema);
-	
-		var newRockArtist = new RockArtist(artists.rock[0]);
+		var HipHopArtist = mongoose.model("HipHopArtist", ArtistSchema),
+				RockArtist = mongoose.model("RockArtist", ArtistSchema),
+				PopArtist = mongoose.model("PopArtist", ArtistSchema),
+				CountryArtist = mongoose.model("CountryArtist", ArtistSchema);
 		
+		for(var i = 0; i < artists.hipHop.length; i++){
+			var newHipHopArtist = new HipHopArtist(artists.hipHop[i]);
+				newHipHopArtist.save(newHipHopArtist);
+			}
+
+		for(var i = 0; i < artists.rock.length; i++){
+			var newRockArtist = new RockArtist(artists.rock[i]);
+				newRockArtist.save(newRockArtist);
+		}
 		
+		for(var i = 0; i < artists.pop.length; i++){
+			var newPopArtist = new PopArtist(artists.pop[i]);
+				newPopArtist.save(newPopArtist);
+		}
+
+		for(var i = 0; i < artists.country.length; i++){
+			var newCountryArtist = new CountryArtist(artists.country[i]);
+				newCountryArtist.save(newCountryArtist);
+		}
 		
 		app.listen(3000);
 		console.log("listening on port 3000");
