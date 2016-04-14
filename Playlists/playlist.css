@@ -1,201 +1,241 @@
- body {
-     background: rgba(82, 149, 242, 0.89);
-     font-family: "arial";
-     overflow: hidden;
- }
+@import url(https://fonts.googleapis.com/css?family=Arya:700);
+body {
+    background-image: url(../Images/background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    font-family: "arial";
+    overflow: hidden;
+}
 
- @font-face {
-     font-family: myFont;
-     src: url('fonts/DrukWide-Heavy.ttf');
- }
+section {
+    display: inline-block;
+    margin-top: -50px;
+    margin-bottom: -600px;
+    margin-left: 200px;
+    margin-right: auto;
+}
 
- section {
-     display: inline-block;
-     margin-top: -50px;
-     margin-bottom: -600px;
-     margin-left: 200px;
-     margin-right: auto;
- }
+nav {
+    width: 120%;
+    background: transparent;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.81);
+    top: -5;
+    height: 50px;
+    z-index: 99999;
+    position: fixed;
+    margin-left: -10px;
+    margin-top: -5px;
+}
 
- #genreBox1 {
-     top: 20px;
-     height: 200px;
-     width: 440px;
-     margin-bottom: 50px;
-     margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
-     float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
+nav a {
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
 
- #genreBox2 {
-     top: 20px;
-     height: 200px;
-     width: 440px;
-     margin-bottom: 50px;
-     margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
-     float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
+nav img {
+    width: 120px;
+    height: 90px;
+    margin-top: -25px;
+}
 
- #genreBox3 {
-     top: 20px;
-     height: 200px;
-     width: 440px;
-     margin-bottom: 100px;
-     margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
-     float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
+#genreBox1 {
+    top: 20px;
+    height: 200px;
+    width: 440px;
+    margin-bottom: 50px;
+    margin-left: 18px;
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
 
- #genreBox4 {
-     top: 20px;
-     height: 200px;
-     width: 440px;
-     margin-bottom: 100px;
-     margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
-     float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
+#genreBox2 {
+    top: 20px;
+    height: 200px;
+    width: 440px;
+    margin-bottom: 50px;
+    margin-left: 18px;
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
 
- #genreBox1,
- #genreBox2,
- #genreBox3,
- #genreBox4 h1 {
+#genreBox3 {
+    top: 20px;
+    height: 200px;
+    width: 440px;
+    margin-bottom: 100px;
+    margin-left: 18px;
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+#genreBox4 {
+    top: 20px;
+    height: 200px;
+    width: 440px;
+    margin-bottom: 100px;
+    margin-left: 18px;
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+#genreBox1 h1,
+#genreBox2 h1,
+#genreBox3 h1,
+#genreBox4 h1 {
     text-align: center;
-     color: white;
- }
+    color: rgb(255, 255, 255);
+    margin-top: 70px;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+}
 
- .musicInfoBox {
-     background-color: rgba(46, 46, 46, 0.75);
-     width: 350px;
-     height: 80px;
-     margin-top: 25px;
-     margin-left: 0px;
-     margin-bottom: -120px;
-     margin-right: auto;
-     position: relative;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
- /*My audioPlayer Player and Control Attributes */
+.musicInfoBox {
+    background-color: rgba(46, 46, 46, 0.75);
+    width: 350px;
+    height: 80px;
+    margin-top: 25px;
+    margin-left: 0px;
+    margin-bottom: -120px;
+    margin-right: auto;
+    position: relative;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+}
 
- #audioPlayer_player_box {
-     width: 150%;
-     height: 100px;
-     background: rgb(51, 50, 50);
-     /* For browsers that do not support gradients */
-     margin-top: 594px;
-     margin-bottom: auto;
-     margin-left: -10px;
-     margin-right: auto;
-     bottom: 0px;
-     box-shadow: 0px -5px 5px -5px rgb(41, 41, 41);
-     */
- }
 
- #audioPlayer_controls_bar {
-     background-color: transparent;
-     padding: 10px;
-     color: #65737e;
-     position: relative;
- }
+/*My audioPlayer Player and Control Attributes */
 
- #audioPlayer_controls_bar:hover {
-     opacity: 0.9;
-     transition: 0.15s;
- }
+#audioPlayer_player_box {
+    width: 150%;
+    height: 100px;
+    background: rgba(31, 31, 31, 0.94);
+    /* For browsers that do not support gradients */
+    margin-top: 564px;
+    margin-bottom: auto;
+    margin-left: -10px;
+    margin-right: auto;
+    bottom: 0px;
+    box-shadow: 0px -5px 5px -5px rgba(41, 41, 41, 0.87);
+    */
+}
 
- #playpausebtn {
-     color: ghostwhite;
-     margin-left: 550px;
-     background: transparent;
-     border: 0 none;
-     cursor: pointer;
-     padding: 5px;
-     width: 60px;
-     font-size: 15px;
-     position: relative;
- }
+#audioPlayer_controls_bar {
+    background-color: transparent;
+    padding: 10px;
+    color: #65737e;
+    position: relative;
+}
 
- #playpausebtn:hover {
-     padding: 5px;
-     width: 60px;
-     background: #46484d;
-     -webkit-border-radius: 5px;
-     border-radius: 5px;
-     font-size: 15px;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
-     text-align: center;
- }
+#audioPlayer_controls_bar:hover {
+    opacity: 0.9;
+    transition: 0.15s;
+}
 
- #mutebtn {
-     margin-left: 900px;
-     color: ghostwhite;
-     border: 0 none;
-     cursor: pointer;
-     background: transparent;
-     padding: 5px;
-     width: 60px;
-     font-size: 15px;
-     margin-left: 350px;
- }
+#playpausebtn {
+    color: rgb(38, 149, 230);
+    margin-left: 550px;
+    background: transparent;
+    border: 0 none;
+    cursor: pointer;
+    padding: 5px;
+    width: 60px;
+    font-size: 15px;
+    position: relative;
+}
 
- #mutebtn:hover {
-     padding: 5px;
-     background: #46484d;
-     -webkit-border-radius: 5px;
-     border-radius: 5px;
-     font-size: 15px;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
- }
+#playpausebtn:hover {
+    padding: 5px;
+    width: 60px;
+    background: #46484d;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    text-align: center;
+}
 
- #seekslider {
-     padding-right: 10px;
-     padding-left: 15px;
-     width: 70%;
-     height: 2px;
-     opacity: 0.8;
-     background: rgb(255, 255, 255);
-     margin-top: 20px;
-     margin-left: -5px;
- }
+#mutebtn {
+    margin-left: 900px;
+    color: rgb(38, 149, 230);
+    border: 0 none;
+    cursor: pointer;
+    background: transparent;
+    padding: 5px;
+    width: 60px;
+    font-size: 15px;
+    margin-left: 350px;
+}
 
- #seekslider:hover {
-     opacity: 1;
-     -webkit-transition-timing-function: ease-out;
- }
+#mutebtn:hover {
+    padding: 5px;
+    background: #46484d;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0px 4px 5px rgb(41, 41, 41);
+}
 
- #volumeslider {
-     width: 80px;
-     padding: 5px;
-     background-color: ghostwhite;
- }
+#seekslider {
+    padding-right: 10px;
+    padding-left: 15px;
+    width: 70%;
+    height: 1px;
+    opacity: 0.8;
+    background: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: -5px;
+}
 
- #curtimetext {
-     color: white;
-     font-size: 12px;
- }
+#seekslider:hover {
+    opacity: 1;
+    -webkit-transition-timing-function: ease-out;
+}
 
- #durtimetext {
-     color: gray;
-     font-size: 12px;
- }
+#volumeslider {
+    width: 80px;
+    padding: 5px;
+    background-color: ghostwhite;
+}
 
- input[type='range'] {
-     -webkit-appearance: none !important;
-     background: transparent;
-     height: 1px;
- }
+#curtimetext {
+    color: white;
+    font-size: 12px;
+}
 
- input[type='range']::-webkit-slider-thumb {
-     -webkit-appearance: none !important;
-     background: transparent;
-     height: 15px;
-     width: 15px;
-     border-radius: 100%;
-     border: 2px solid rgb(155, 205, 255);
-     cursor: pointer;
- }
+#durtimetext {
+    color: gray;
+    font-size: 12px;
+}
+
+input[type='range'] {
+    -webkit-appearance: none !important;
+    background: transparent;
+    height: 1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: transparent;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 2px solid rgb(38, 149, 230);
+    cursor: pointer;
+}
