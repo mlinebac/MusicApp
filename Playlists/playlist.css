@@ -1,5 +1,9 @@
  body {
-     background: rgba(82, 149, 242, 0.89);
+     background-image: url(../Images/background.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+     background-position: center;
      font-family: "arial";
      overflow: hidden;
  }
@@ -15,7 +19,36 @@
      margin-bottom: -600px;
      margin-left: 200px;
      margin-right: auto;
+
  }
+
+nav {
+ width: 120%;
+    background: transparent;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    top:-5;
+    height: 50px;
+    z-index: 99999;
+     position: fixed;
+    margin-left: -10px;
+    margin-top: -5px;
+
+}
+
+nav a {
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav img {
+    width: 120px;
+    height: 90px;
+    margin-top: -25px;
+
+}
 
  #genreBox1 {
      top: 20px;
@@ -23,9 +56,11 @@
      width: 440px;
      margin-bottom: 50px;
      margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
+     background-color: rgba(31, 31, 31, 0.92);
      float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+     border-radius: 5px;
+     border: 1px solid #b7b4b4;
  }
 
  #genreBox2 {
@@ -34,9 +69,11 @@
      width: 440px;
      margin-bottom: 50px;
      margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
+     background-color: rgba(31, 31, 31, 0.92);
      float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+     border-radius: 5px;
+     border: 1px solid #b7b4b4;
  }
 
  #genreBox3 {
@@ -45,9 +82,11 @@
      width: 440px;
      margin-bottom: 100px;
      margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
+     background-color: rgba(31, 31, 31, 0.92);
      float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+     border-radius: 5px;
+     border: 1px solid #b7b4b4;
  }
 
  #genreBox4 {
@@ -56,9 +95,11 @@
      width: 440px;
      margin-bottom: 100px;
      margin-left: 15px;
-     background-color: rgba(46, 41, 41, 0.93);
+     background-color: rgba(31, 31, 31, 0.92);
      float: left;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+     border-radius: 5px;
+     border: 1px solid #b7b4b4;
  }
 
  #genreBox1,
@@ -66,8 +107,9 @@
  #genreBox3,
  #genreBox4 h1 {
     text-align: center;
-     color: white;
+     color: rgb(38, 149, 230);
  }
+
 
  .musicInfoBox {
      background-color: rgba(46, 46, 46, 0.75);
@@ -78,21 +120,21 @@
      margin-bottom: -120px;
      margin-right: auto;
      position: relative;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
  }
  /*My audioPlayer Player and Control Attributes */
 
  #audioPlayer_player_box {
      width: 150%;
      height: 100px;
-     background: rgb(51, 50, 50);
+     background: rgba(31, 31, 31, 0.94);
      /* For browsers that do not support gradients */
-     margin-top: 594px;
+     margin-top: 564px;
      margin-bottom: auto;
      margin-left: -10px;
      margin-right: auto;
      bottom: 0px;
-     box-shadow: 0px -5px 5px -5px rgb(41, 41, 41);
+     box-shadow: 0px -5px 5px -5px rgba(41, 41, 41, 0.87);
      */
  }
 
@@ -109,7 +151,7 @@
  }
 
  #playpausebtn {
-     color: ghostwhite;
+     color: rgb(38, 149, 230);
      margin-left: 550px;
      background: transparent;
      border: 0 none;
@@ -127,13 +169,13 @@
      -webkit-border-radius: 5px;
      border-radius: 5px;
      font-size: 15px;
-     box-shadow: 0px 4px 5px rgb(41, 41, 41);
+     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
      text-align: center;
  }
 
  #mutebtn {
      margin-left: 900px;
-     color: ghostwhite;
+     color: rgb(38, 149, 230);
      border: 0 none;
      cursor: pointer;
      background: transparent;
@@ -156,7 +198,7 @@
      padding-right: 10px;
      padding-left: 15px;
      width: 70%;
-     height: 2px;
+     height: 1px;
      opacity: 0.8;
      background: rgb(255, 255, 255);
      margin-top: 20px;
@@ -196,6 +238,6 @@
      height: 15px;
      width: 15px;
      border-radius: 100%;
-     border: 2px solid rgb(155, 205, 255);
+     border: 2px solid rgb(38, 149, 230);
      cursor: pointer;
  }
