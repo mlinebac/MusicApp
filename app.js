@@ -5,46 +5,42 @@
 		var express = require("express"),
 				bodyParser = require("body-parser"),
 				mongoose = require("mongoose"),
+			  artists = require("./artists"),
 				app = new express();
-
+				
 		app.use(express.static(__dirname));
 		app.use(bodyParser.urlencoded({ extended: true}));
-
-		mongoose.connect("mongodb://localhost/musicWarehouse");
-
+	
+		mongoose.connect("mongodb://localhost/music");
+		
 		var ArtistSchema = mongoose.Schema({
-				"name" : String,
-				"genre" : String,
-				"album" : String,
+				"artist" : String,
+				"title" : String,
+				"path" : String,
 				"likes" : Number,
 				"dislikes" : Number});
 
-		var Artist = mongoose.model("Artist", ArtistSchema);
+		var HipHopPlaylist = mongoose.model("HipHopPlaylist", ArtistSchema),
+				RockPlaylist = mongoose.model("RockPlaylist", ArtistSchema),
+				PopPlaylist = mongoose.model("PopPlaylist", ArtistSchema),
+				CountryPlaylist = mongoose.model("CountryPlaylist", ArtistSchema);
+		
+		for(var i = 0; i < artists.hipHop.length; i++){
+			HipHopPlaylist(artists.hipHop[i]).save(HipHopPlaylist);
+		}
 
-		app.use(function(req, res, next){
-			console.log('%s %s', req.method, req.url);
-			next();
-		});
+		for(var i = 0; i < artists.rock.length; i++){
+			RockPlaylist(artists.rock[i]).save(RockPlaylist);
+		}
+		
+		for(var i = 0; i < artists.pop.length; i++){
+			PopPlaylist(artists.pop[i]).save(PopPlaylist);
+		}
 
-		app.get("/getArtist", function(req, res, next) {
-			Artist.find(req.query, function(err, artist) {
-				if(err) {
-					console.log(err);
-					} else {
-							res.json(artist);
-					}
-				res.end();
-			});
-		});
-
-		app.post("/putArtist", function(req, res, next) {
-			var newArtist = new Artist(req.body);
-			newArtist.save(function(error, data) {
-				if (error) console.log(error);
-			});
-			res.end();
-		});
-
+		for(var i = 0; i < artists.country.length; i++){
+			CountryPlaylist(artists.country[i]).save(CountryPlaylist);
+		}
+		
 		app.listen(3000);
 		console.log("listening on port 3000");
 

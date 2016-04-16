@@ -1,23 +1,55 @@
 <!doctype html>
 <html lang="en" ng-app="music">
-	<head>
-		<title>Homepage!</title>
-		<link rel="stylesheet" type="text/css" href="mainPage.css">
-	</head>
-	<body>
 
-        <div class="genreBox1">
-            <p>ROCK</p>
-        </div>
-        <div class="genreBox2">
-            <p>COUNTRY</p>
-        </div>
-        <div class="genreBox3">
-            <p>HIP-HOP</p>
-        </div>
-        <div class="genreBox4">
-            <p>POP</p>
-        </div>
+<head>
+    <title>iVinyl : Always Bring the Concert with You</title>
+    <link rel="icon" type="image/png" href="Images/logoFavicon.png">
+    <link rel="stylesheet" type="text/css" href="playlist.css">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="playlist.js"></script>
+    <script src="playlistAction.js"></script>
+</head>
 
-	</body>
+<body>
+    <nav>
+        <a href="#">
+            <img src="Images/logoTitle.png">
+        </a>
+    </nav>
+    <section>
+        <a href="#">
+            <div id="genreBox1">
+                <h1>Hip-Hop</h1></div>
+        </a>
+        <a href="#">
+            <div id="genreBox2">
+                <h1>Rock</h1></div>
+        </a>
+        <a href="#">
+            <div id="genreBox3">
+                <h1>Pop</h1></div>
+        </a>
+        <a href="#">
+            <div id="genreBox4">
+                <h1>Country</h1></div>
+        </a>
+    </section>
+
+    <div id="audioPlayer_player_box">
+        <audio id="my_audioPlayer" autoplay>
+
+        </audio>
+        <div id="audioPlayer_controls_bar">
+            <div style=" margin-top: -20px; margin-left: -10px;">
+                <input id="seekslider" type="range" min="0" max="100" value="0" steps="1">
+            </div>
+
+            <span id="curtimetext"></span> / <span id="durtimetext"></span>
+            <button id="playpausebtn">&#10074 &#10074</button>
+            <button id="mutebtn">&#128266</button>
+            <input id="volumeslider" type="range" min="0" max="100" value="100" steps="1">
+        </div>
+    </div>
+</body>
+
 </html>
