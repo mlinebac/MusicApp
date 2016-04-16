@@ -43,6 +43,8 @@ nav img {
     margin-top: -25px;
 }
 
+
+
 #genreBox1 {
     top: 20px;
     height: 200px;
@@ -54,7 +56,21 @@ nav img {
     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
     border-radius: 5px;
     border: 1px solid #b7b4b4;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
+
+
+ #genreBox1:hover {
+
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+backface-visibility: hidden;
+}
+
+
 
 #genreBox2 {
     top: 20px;
@@ -67,7 +83,19 @@ nav img {
     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
     border-radius: 5px;
     border: 1px solid #b7b4b4;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
+
+#genreBox2:hover {
+
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+backface-visibility: hidden;
+}
+
 
 #genreBox3 {
     top: 20px;
@@ -80,7 +108,19 @@ nav img {
     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
     border-radius: 5px;
     border: 1px solid #b7b4b4;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
+
+#genreBox3:hover {
+
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+backface-visibility: hidden;
+}
+
 
 #genreBox4 {
     top: 20px;
@@ -93,7 +133,21 @@ nav img {
     box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
     border-radius: 5px;
     border: 1px solid #b7b4b4;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
+
+#genreBox4:hover {
+
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+backface-visibility: hidden;
+}
+
+
+
 
 #genreBox1 h1,
 #genreBox2 h1,
