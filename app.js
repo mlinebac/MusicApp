@@ -42,17 +42,18 @@
 		}
 		
 		app.get ("/getPlaylist", function(req,res,next){
-			hipHopPlaylist.find(req.query, function(err, hipHopPlaylist){
+			HipHopPlaylist.find(req.query, function(err, hipHopPlaylist){
 				if(err){
 					console.log(err);
 					}else{
+						console.log(hipHopPlaylist);
 						res.json(hipHopPlaylist);
 					}
 				res.end();
 			});
 		});
 
-		app.post ("/updatePlaylist", function(req, res, next) {
+		/*app.post ("/updatePlaylist", function(req, res, next) {
 		var conditions = {"artist" : req.body.artist};
 		var update = {$set : {"likes" : req.body.likes,
 								 				 "dislikes" : req.body.dislikes}};
@@ -61,7 +62,7 @@
 		});
 		res.end();
 	});
-
+*/
 		app.listen(3000);
 		console.log("listening on port 3000");
 

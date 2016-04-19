@@ -3,21 +3,22 @@
 
 	app.controller('PlaylistController', ['$scope', function($scope){
 		$scope.artist = $scope.title = $scope.path = $scope.likes = $scope.dislikes = '';
-		$scope.playlists = [];
+		$scope.playlist = [];
 
 		$scope.all = function(){
 			$.getJSON('getPlaylist', function(result){
-				$scope.playlists = result;
+				$scope.playlist = result;
 			});
 		};
 
-		$scope.update = function(){
+		/*$scope.update = function(){
 			var updateArtist = {"artist" : $scope.artist, "likes" : $scope.likes, "dislikes" : $scope.dislikes};
 			$.post('updateArtist', updateArtist);
 			$scope.artist = $scope.likes = $scope.dislikes = '';
 		};
+*/
 
 
-	};
-]);
+	}]);
+
 }());
