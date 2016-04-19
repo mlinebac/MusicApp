@@ -52,7 +52,7 @@
 			});
 		});
 
-		app.post("/updatePlaylist", function(req, res, next) {
+		app.post ("/updatePlaylist", function(req, res, next) {
 		var conditions = {"artist" : req.body.artist};
 		var update = {$set : {"likes" : req.body.likes,
 								 				 "dislikes" : req.body.dislikes}};
