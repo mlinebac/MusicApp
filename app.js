@@ -41,11 +41,30 @@
 			CountryPlaylist(artists.country[i]).save(CountryPlaylist);
 		}
 		
+		app.get ("/getPlaylist", function(req,res,next){
+			hipHopPlaylist.find(req.query, function(err, hipHopPlaylist){
+				if(err){
+					console.log(err);
+					}else{
+						res.json(hipHopPlaylist);
+					}
+				res.end();
+			});
+		});
+
+		app.post("/updatePlaylist", function(req, res, next) {
+		var conditions = {"artist" : req.body.artist};
+		var update = {$set : {"likes" : req.body.likes,
+								 				 "dislikes" : req.body.dislikes}};
+		hipHopPlaylist.update(conditions, update, {multi : false}, function(error, result) {
+			if (error) console.log(error);
+		});
+		res.end();
+	});
+
 		app.listen(3000);
 		console.log("listening on port 3000");
 
 	};
-
 	main();
-
 }());
