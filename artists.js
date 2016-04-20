@@ -7,8 +7,8 @@
                 "artist": "The Chain Smokers",
                 "title": "Don't Let Me Down",
                 "path": "../Music/The%20Chainsmokers%20Featuring%20Daya%20-%20Don't%20Let%20Me%20Down.mp3",
-								"likes": 0,
-								"dislikes": 0
+								"likes": 2,
+								"dislikes": 3
         }, {
                 "artist": "DJ Snake",
                 "title": "Middle",

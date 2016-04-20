@@ -9,7 +9,8 @@
     <script src="playlist.js"></script>
     <script src="playlistAction.js"></script>
 </head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+<script src='music.js'></script>
 <body>
     <nav>
         <a href="#">
@@ -18,26 +19,47 @@
     </nav>
     <section>
         <a href="#">
-            <div id="genreBox1">
-                <h1>Hip-Hop</h1></div>
+            <div id="genreBox1" ng-app='music' ng-controller='hipHopPlaylistController'>
+              <h1>Hip-Hop</h1>
+							<ul>
+									<li ng-repeat="h in artist">
+										{{h.artist}}
+								</li>
+									</ul>
+					</div>
+
         </a>
         <a href="#">
-            <div id="genreBox2">
-                <h1>Rock</h1></div>
+            <div id="genreBox2" ng-app= 'music' ng-controller='rockPlaylistController'>
+            	<h1>Rock</h1>
+								<ul>
+									<li ng-repeat="r in artist">{{r.artist}}
+									</li>
+							</ul>
+					</div>
         </a>
         <a href="#">
-            <div id="genreBox3">
-                <h1>Pop</h1></div>
+            <div id="genreBox3" ng-app= 'music' ng-controller= 'popPlaylistController'>
+                <h1>Pop</h1>
+									<ul>
+										<li ng-repeat="p in artist">{{p.artist}}</li>
+
+							</ul>
+
+					</div>
         </a>
         <a href="#">
-            <div id="genreBox4">
-                <h1>Country</h1></div>
+            <div id="genreBox4" ng-app= 'music' ng-controller='countryPlaylistController'>
+                <h1>Country</h1>
+									<ul>
+										<li ng-repeat="c in artist">{{c.artist}}</li>
+							</ul>
+					</div>
         </a>
     </section>
 
     <div id="audioPlayer_player_box">
         <audio id="my_audioPlayer" autoplay>
-
         </audio>
         <div id="audioPlayer_controls_bar">
             <div style=" margin-top: -20px; margin-left: -10px;">
@@ -50,6 +72,7 @@
             <input id="volumeslider" type="range" min="0" max="100" value="100" steps="1">
         </div>
     </div>
-</body>
+
+	</body>
 
 </html>
