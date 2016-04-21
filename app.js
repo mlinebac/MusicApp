@@ -16,9 +16,8 @@
 		var ArtistSchema = mongoose.Schema({
 				"artist" : String,
 				"title" : String,
-				"path" : String,
-				"likes" : Number,
-				"dislikes" : Number});
+				"path" : String
+				});
 
 		var HipHopPlaylist = mongoose.model("HipHopPlaylist", ArtistSchema),
 				RockPlaylist = mongoose.model("RockPlaylist", ArtistSchema),

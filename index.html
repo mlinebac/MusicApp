@@ -9,55 +9,70 @@
     <script src="playlist.js"></script>
     <script src="playlistAction.js"></script>
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
-<script src='music.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	<script src='music.js'></script>
 <body>
-    <nav>
-        <a href="#">
-            <img src="Images/logoTitle.png">
-        </a>
-    </nav>
-    <section>
-        <a href="#">
-            <div id="genreBox1" ng-app='music' ng-controller='hipHopPlaylistController'>
-              <h1>Hip-Hop</h1>
-							<ul>
-									<li ng-repeat="h in artist">
-										{{h.artist}}
-								</li>
-									</ul>
+	<nav>
+    <a href="#">
+     	<img src="Images/logoTitle.png">
+     </a>
+	</nav>
+   <section>
+    <a href="#">
+			<div id="genreBox1" >
+				<table id='hipHop' ng-app='music' ng-controller='hipHopPlaylistController' >
+					<tr>
+						<th>Artist</th>
+						<th>Title</th>
+					</tr>
+					<tr ng-repeat="h in artist", ng-repeat="h in title">
+						<td>{{h.artist}}</td>
+						<td>{{h.title}}</td>
+					</tr>
+				</table>
+					<h1>Hip-Hop</h1>
+			</div>
+     </a>
+     <a href="#">
+     	<div id="genreBox2" >
+				<table id = 'rock' ng-app= 'music' ng-controller='rockPlaylistController'>
+					<th>Artist</th>
+					<th>Title</th>
+						<tr ng-repeat="r in artist", ng-repeat="r in title">
+							<td>{{r.artist}}</td>
+							<td>{{r.title}}</td>
+						</tr>
+				</table>
+         <h1>Rock</h1>
+			</div>
+      </a>
+      <a href="#">
+      	<div id="genreBox3" >
+					<table id='pop' ng-app= 'music' ng-controller= 'popPlaylistController'>
+						<th>Artist</th>
+						<th>Title</th>
+							<tr ng-repeat="p in artist", ng-repeat="p in title">
+								<td>{{p.artist}}</td>
+								<td>{{p.title}}</td>
+							</tr>
+					</table>
+           <h1>Pop</h1>
 					</div>
-
         </a>
         <a href="#">
-            <div id="genreBox2" ng-app= 'music' ng-controller='rockPlaylistController'>
-            	<h1>Rock</h1>
-								<ul>
-									<li ng-repeat="r in artist">{{r.artist}}
-									</li>
-							</ul>
-					</div>
-        </a>
-        <a href="#">
-            <div id="genreBox3" ng-app= 'music' ng-controller= 'popPlaylistController'>
-                <h1>Pop</h1>
-									<ul>
-										<li ng-repeat="p in artist">{{p.artist}}</li>
-
-							</ul>
-
-					</div>
-        </a>
-        <a href="#">
-            <div id="genreBox4" ng-app= 'music' ng-controller='countryPlaylistController'>
-                <h1>Country</h1>
-									<ul>
-										<li ng-repeat="c in artist">{{c.artist}}</li>
-							</ul>
+         <div id="genreBox4" >
+					<table id='country' ng-app='music' ng-controller='countryPlaylistController' >
+						<th>Artist</th>
+						<th>Title</th>
+							<tr ng-repeat="c in artist", ng-repeat="c in artist">
+								<td>{{c.artist}}</td>
+								<td>{{c.title}}</td>
+							</tr>
+					</table>
+           <h1>Country</h1>
 					</div>
         </a>
     </section>
-
     <div id="audioPlayer_player_box">
         <audio id="my_audioPlayer" autoplay>
         </audio>

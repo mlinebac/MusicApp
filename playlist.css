@@ -58,8 +58,8 @@ nav img {
     border: 1px solid #b7b4b4;
     transform-style: preserve-3d;
     transition: transform 1s;
-}
 
+}
 
  #genreBox1:hover {
 
@@ -143,7 +143,7 @@ backface-visibility: hidden;
 -moz-transform: rotateY(180deg);
 -o-transform: rotateY(180deg);
 transform: rotateY(180deg);
-backface-visibility: hidden;
+backface-visibility:hidden;
 }
 
 
