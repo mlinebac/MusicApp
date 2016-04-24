@@ -7,6 +7,10 @@
 
     var main = function () {
         var audio = document.getElementById('my_audioPlayer'),
+            popClicked = false,
+            hipHopClicked = false,
+            countryClicked = false,
+            rockClicked = false,
             hipHopPlaylist = document.getElementById('genreBox1'),
             rockPlaylist = document.getElementById('genreBox2'),
             popPlaylist = document.getElementById('genreBox3'),
@@ -69,7 +73,19 @@
             }];
 
         hipHopPlaylist.addEventListener('click', function () {
+            hipHopClicked = true;
             audio.src = hipHop[0].path;
+            $('.card').toggleClass('flipped');
+            if (popClicked !== false) {
+                $('.card3').toggleClass('flipped3');
+                popClicked = false;
+            }else if (countryClicked !== false) {
+                $('.card4').toggleClass('flipped4');
+                countryClicked = false;
+            }else if (rockClicked !== false) {
+                $('.card2').toggleClass('flipped2');
+                rockClicked = false;
+            }
             audio.addEventListener('ended', function () {
                 i++;
                 if (i > hipHop.length) {
@@ -82,7 +98,19 @@
         }, true);
 
         rockPlaylist.addEventListener('click', function () {
+            rockClicked = true;
             audio.src = rock[0].path;
+            $('.card2').toggleClass('flipped2');
+            if (popClicked !== false) {
+                $('.card3').toggleClass('flipped3');
+                popClicked = false;
+            }else if (hipHopClicked !== false) {
+                $('.card').toggleClass('flipped');
+                hipHopClicked = false;
+            }else if (countryClicked !== false) {
+                $('.card3').toggleClass('flipped3');
+                countryClicked = false;
+            }
             audio.addEventListener('ended', function () {
                 i++;
                 if (i > rock.length) {
@@ -95,7 +123,19 @@
         }, true);
 
         popPlaylist.addEventListener('click', function () {
+            popClicked = true;
             audio.src = pop[0].path;
+            $('.card3').toggleClass('flipped3');
+            if (countryClicked !== false) {
+                $('.card4').toggleClass('flipped4');
+                countryCicked = false;
+            }else if (hipHopClicked !== false) {
+                $('.card').toggleClass('flipped');
+                hipHopClicked = false;
+            }else if (rockClicked !== false) {
+                $('.card2').toggleClass('flipped2');
+                rockClicked = false;
+            }
             audio.addEventListener('ended', function () {
                 i++;
                 if (i > pop.length) {
@@ -108,7 +148,19 @@
         }, true);
 
         countryPlaylist.addEventListener('click', function () {
+            countryClicked = true;
             audio.src = country[0].path;
+            $('.card4').toggleClass('flipped4');
+            if (popClicked !== false) {
+                $('.card3').toggleClass('flipped3');
+                popClicked = false;
+            }else if (hipHopClicked !== false) {
+                $('.card').toggleClass('flipped');
+                hipHopClicked = false;
+            }else if (rockClicked !== false) {
+                $('.card2').toggleClass('flipped2');
+                rockClicked = false;
+            }
             audio.addEventListener('ended', function () {
                 i++;
                 if (i > country.length) {

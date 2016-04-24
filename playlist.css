@@ -11,10 +11,272 @@ body {
 
 section {
     display: inline-block;
-    margin-top: -50px;
+    position: relative;
+    height: 100%;
+
     margin-bottom: -600px;
     margin-left: 200px;
     margin-right: auto;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.container {
+    width: 200px;
+    height: 260px;
+    position: relative;
+    border: 1px solid #ccc;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.card {
+
+    height: 200px;
+    width: 440px;
+
+    margin-bottom: 50px;
+    margin-left: 18px;
+    float: left;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.card div {
+    display: block;
+    height: 200px;
+    width: 440px;
+
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card .front {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+.card .back {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card.flipped {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card2 {
+
+    height: 200px;
+    width: 440px;
+
+    margin-bottom: 50px;
+    margin-left: 18px;
+    float: left;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.card2 div {
+    display: block;
+    height: 200px;
+    width: 440px;
+
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card2 .front2 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+.card2 .back2 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card2.flipped2 {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card3 {
+    top: 20px;
+    height: 200px;
+    width: 440px;
+    margin-bottom: 50px;
+    margin-left: 18px;
+    float: left;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.card3 div {
+    display: block;
+    height: 200px;
+    width: 440px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card3 .front3 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+.card3 .back3 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card3.flipped3 {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card4 {
+    top: 10px;
+    height: 200px;
+    width: 440px;
+
+    margin-bottom: 100px;
+    margin-left: 18px;
+    float: left;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.card4 div {
+    display: block;
+    height: 200px;
+    width: 440px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card4 .front4 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+}
+
+.card4 .back4 {
+    background-color: rgba(31, 31, 31, 0.92);
+    float: left;
+    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
+    border-radius: 5px;
+    border: 1px solid #b7b4b4;
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+.card4.flipped4 {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
 }
 
 nav {
@@ -43,111 +305,13 @@ nav img {
     margin-top: -25px;
 }
 
+#genreBox1 {}
 
+#genreBox2 {}
 
-#genreBox1 {
-    top: 20px;
-    height: 200px;
-    width: 440px;
-    margin-bottom: 50px;
-    margin-left: 18px;
-    background-color: rgba(31, 31, 31, 0.92);
-    float: left;
-    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
-    border-radius: 5px;
-    border: 1px solid #b7b4b4;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+#genreBox3 {}
 
-}
-
- #genreBox1:hover {
-
--webkit-transform: rotateY(180deg);
--moz-transform: rotateY(180deg);
--o-transform: rotateY(180deg);
-transform: rotateY(180deg);
-backface-visibility: hidden;
-}
-
-
-
-#genreBox2 {
-    top: 20px;
-    height: 200px;
-    width: 440px;
-    margin-bottom: 50px;
-    margin-left: 18px;
-    background-color: rgba(31, 31, 31, 0.92);
-    float: left;
-    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
-    border-radius: 5px;
-    border: 1px solid #b7b4b4;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-#genreBox2:hover {
-
--webkit-transform: rotateY(180deg);
--moz-transform: rotateY(180deg);
--o-transform: rotateY(180deg);
-transform: rotateY(180deg);
-backface-visibility: hidden;
-}
-
-
-#genreBox3 {
-    top: 20px;
-    height: 200px;
-    width: 440px;
-    margin-bottom: 100px;
-    margin-left: 18px;
-    background-color: rgba(31, 31, 31, 0.92);
-    float: left;
-    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
-    border-radius: 5px;
-    border: 1px solid #b7b4b4;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-#genreBox3:hover {
-
--webkit-transform: rotateY(180deg);
--moz-transform: rotateY(180deg);
--o-transform: rotateY(180deg);
-transform: rotateY(180deg);
-backface-visibility: hidden;
-}
-
-
-#genreBox4 {
-    top: 20px;
-    height: 200px;
-    width: 440px;
-    margin-bottom: 100px;
-    margin-left: 18px;
-    background-color: rgba(31, 31, 31, 0.92);
-    float: left;
-    box-shadow: 0px 4px 5px rgba(41, 41, 41, 0.87);
-    border-radius: 5px;
-    border: 1px solid #b7b4b4;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-#genreBox4:hover {
-
--webkit-transform: rotateY(180deg);
--moz-transform: rotateY(180deg);
--o-transform: rotateY(180deg);
-transform: rotateY(180deg);
-backface-visibility:hidden;
-}
-
-
-
+#genreBox4 {}
 
 #genreBox1 h1,
 #genreBox2 h1,

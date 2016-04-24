@@ -9,68 +9,87 @@
     <script src="playlist.js"></script>
     <script src="playlistAction.js"></script>
 </head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
-	<script src='music.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+<script src='music.js'></script>
+
 <body>
-	<nav>
-    <a href="#">
-     	<img src="Images/logoTitle.png">
-     </a>
-	</nav>
-   <section>
-    <a href="#">
-			<div id="genreBox1" >
-				<table id='hipHop' ng-app='music' ng-controller='hipHopPlaylistController' >
-					<tr>
-						<th>Artist</th>
-						<th>Title</th>
-					</tr>
-					<tr ng-repeat="h in artist", ng-repeat="h in title">
-						<td>{{h.artist}}</td>
-						<td>{{h.title}}</td>
-					</tr>
-				</table>
-					<h1>Hip-Hop</h1>
-			</div>
-     </a>
-     <a href="#">
-     	<div id="genreBox2" >
-				<table id = 'rock' ng-app= 'music' ng-controller='rockPlaylistController'>
-					<th>Artist</th>
-					<th>Title</th>
-						<tr ng-repeat="r in artist", ng-repeat="r in title">
-							<td>{{r.artist}}</td>
-							<td>{{r.title}}</td>
-						</tr>
-				</table>
-         <h1>Rock</h1>
-			</div>
-      </a>
-      <a href="#">
-      	<div id="genreBox3" >
-					<table id='pop' ng-app= 'music' ng-controller= 'popPlaylistController'>
-						<th>Artist</th>
-						<th>Title</th>
-							<tr ng-repeat="p in artist", ng-repeat="p in title">
-								<td>{{p.artist}}</td>
-								<td>{{p.title}}</td>
-							</tr>
-					</table>
-           <h1>Pop</h1>
-					</div>
-        </a>
+    <nav>
         <a href="#">
-         <div id="genreBox4" >
-					<table id='country' ng-app='music' ng-controller='countryPlaylistController' >
-						<th>Artist</th>
-						<th>Title</th>
-							<tr ng-repeat="c in artist", ng-repeat="c in artist">
-								<td>{{c.artist}}</td>
-								<td>{{c.title}}</td>
-							</tr>
-					</table>
-           <h1>Country</h1>
-					</div>
+            <img src="Images/logoTitle.png">
+        </a>
+    </nav>
+    <section>
+        <a id="genreBox1" href="#">
+            <div class="card" onclick="flip()">
+                <div class="front">
+                    <h1>Hip-Hop</h1></div>
+                <div class="back">
+                    <table id='hipHop' ng-app='music' ng-controller='hipHopPlaylistController'>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Title</th>
+                        </tr>
+                        <tr ng-repeat="h in artist" , ng-repeat="h in title">
+                            <td>{{h.artist}}</td>
+                            <td>{{h.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </a>
+        <a id="genreBox2" href="#">
+            <div class="card2" onclick="flip()">
+                <div class="front2">
+                    <h1>Rock</h1></div>
+                <div class="back2">
+                    <table id='rock' ng-app='music' ng-controller='rockPlaylistController'>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Title</th>
+                        </tr>
+                        <tr ng-repeat="h in artist" , ng-repeat="h in title">
+                            <td>{{h.artist}}</td>
+                            <td>{{h.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </a>
+        <a id="genreBox3" href="#">
+            <div class="card3" onclick="flip()">
+                <div class="front3">
+                    <h1>Pop</h1></div>
+                <div class="back3">
+                    <table id='pop' ng-app='music' ng-controller='popPlaylistController'>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Title</th>
+                        </tr>
+                        <tr ng-repeat="h in artist" , ng-repeat="h in title">
+                            <td>{{h.artist}}</td>
+                            <td>{{h.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </a>
+        <a id="genreBox4" href="#">
+            <div class="card4" onclick="flip()">
+                <div class="front4">
+                    <h1>Country</h1></div>
+                <div class="back4">
+                    <table id='country' ng-app='music' ng-controller='countryPlaylistController'>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Title</th>
+                        </tr>
+                        <tr ng-repeat="h in artist" , ng-repeat="h in title">
+                            <td>{{h.artist}}</td>
+                            <td>{{h.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </a>
     </section>
     <div id="audioPlayer_player_box">
@@ -88,6 +107,6 @@
         </div>
     </div>
 
-	</body>
+</body>
 
 </html>
