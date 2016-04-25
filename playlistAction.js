@@ -79,10 +79,12 @@
             if (popClicked !== false) {
                 $('.card3').toggleClass('flipped3');
                 popClicked = false;
-            }else if (countryClicked !== false) {
+            }
+            if (countryClicked !== false) {
                 $('.card4').toggleClass('flipped4');
                 countryClicked = false;
-            }else if (rockClicked !== false) {
+            }
+            if (rockClicked !== false) {
                 $('.card2').toggleClass('flipped2');
                 rockClicked = false;
             }
@@ -104,10 +106,12 @@
             if (popClicked !== false) {
                 $('.card3').toggleClass('flipped3');
                 popClicked = false;
-            }else if (hipHopClicked !== false) {
+            }
+            if (hipHopClicked !== false) {
                 $('.card').toggleClass('flipped');
                 hipHopClicked = false;
-            }else if (countryClicked !== false) {
+            }
+            if (countryClicked !== false) {
                 $('.card3').toggleClass('flipped3');
                 countryClicked = false;
             }
@@ -129,10 +133,12 @@
             if (countryClicked !== false) {
                 $('.card4').toggleClass('flipped4');
                 countryCicked = false;
-            }else if (hipHopClicked !== false) {
+            }
+            if (hipHopClicked !== false) {
                 $('.card').toggleClass('flipped');
                 hipHopClicked = false;
-            }else if (rockClicked !== false) {
+            }
+            if (rockClicked !== false) {
                 $('.card2').toggleClass('flipped2');
                 rockClicked = false;
             }
@@ -154,10 +160,12 @@
             if (popClicked !== false) {
                 $('.card3').toggleClass('flipped3');
                 popClicked = false;
-            }else if (hipHopClicked !== false) {
+            }
+            if (hipHopClicked !== false) {
                 $('.card').toggleClass('flipped');
                 hipHopClicked = false;
-            }else if (rockClicked !== false) {
+            }
+            if (rockClicked !== false) {
                 $('.card2').toggleClass('flipped2');
                 rockClicked = false;
             }
