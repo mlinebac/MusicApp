@@ -23,24 +23,7 @@
 				RockPlaylist = mongoose.model("RockPlaylist", ArtistSchema),
 				PopPlaylist = mongoose.model("PopPlaylist", ArtistSchema),
 				CountryPlaylist = mongoose.model("CountryPlaylist", ArtistSchema);
-		
-		//gets playlists from artists.js and puts them into mongoDB "music"
-		for(var i = 0; i < artists.hipHop.length; i++){
-				HipHopPlaylist(artists.hipHop[i]).save(HipHopPlaylist);
-		};
 
-		for(var i = 0; i < artists.rock.length; i++){
-			RockPlaylist(artists.rock[i]).save(RockPlaylist);
-		};
-		
-		for(var i = 0; i < artists.pop.length; i++){
-			PopPlaylist(artists.pop[i]).save(PopPlaylist);
-		};
-
-		for(var i = 0; i < artists.country.length; i++){
-			CountryPlaylist(artists.country[i]).save(CountryPlaylist);
-		};
-		
 		//creates route so music.js can get playlists from monogoDB "music"
 		app.get ("/getHipHopPlaylist", function(req,res,next){
 			HipHopPlaylist.find(req.query, function(err, HipHopPlaylist){
@@ -86,6 +69,24 @@
 				res.end();
 			});
 		});
+
+/*gets playlists from artists.js and puts them into mongoDB "music"
+		for(var i = 0; i < artists.hipHop.length; i++){
+				HipHopPlaylist(artists.hipHop[i]).save(HipHopPlaylist);
+		};
+
+		for(var i = 0; i < artists.rock.length; i++){
+			RockPlaylist(artists.rock[i]).save(RockPlaylist);
+		};
+
+		for(var i = 0; i < artists.pop.length; i++){
+			PopPlaylist(artists.pop[i]).save(PopPlaylist);
+		};
+
+		for(var i = 0; i < artists.country.length; i++){
+			CountryPlaylist(artists.country[i]).save(CountryPlaylist);
+		};
+		*/
 
 		app.listen(3000);
 		console.log("listening on port 3000");
