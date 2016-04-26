@@ -35,10 +35,7 @@ section {
     -o-perspective: 800px;
     perspective: 800px;
 }
-/**
-*source: https://jsfiddle.net/james2doyle/qsQun/
-*modified by: Charles Williams and Alex Fresa
-*/
+
 .card {
 
     height: 200px;
