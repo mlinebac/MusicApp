@@ -297,6 +297,7 @@ section {
 
 #hipHop td {
     background-color: lightgray;
+    color:darkblue;
     font-family: 'Arya', sans-serif;
     font-weight: lighter;
 }
@@ -316,6 +317,7 @@ section {
 
 #rock td {
     background-color: lightgray;
+    color: darkblue;
     font-family: 'Arya', sans-serif;
     font-weight: lighter;
 }
@@ -336,6 +338,7 @@ section {
 
 #pop td {
     background-color: lightgray;
+    color: darkblue;
     font-family: 'Arya', sans-serif;
     font-weight: lighter;
 }
@@ -355,6 +358,7 @@ section {
 
 #country td {
     background-color: lightgray;
+    color: darkblue;
     font-family: 'Arya', sans-serif;
     font-weight: lighter;
 }
