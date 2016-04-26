@@ -282,6 +282,83 @@ section {
     transform: rotateY( 180deg);
 }
 
+#hipHop {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#hipHop th {
+    background-color: dimgrey;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#hipHop td {
+    background-color: lightgray;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#rock {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#rock th {
+    background-color:dimgrey;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#rock td {
+    background-color: lightgray;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#pop {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+
+}
+
+#pop th {
+    background-color:dimgrey;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#pop td {
+    background-color: lightgray;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#country {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#country th {
+    background-color:dimgrey;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
+#country td {
+    background-color: lightgray;
+    font-family: 'Arya', sans-serif;
+    font-weight: lighter;
+}
+
 nav {
     width: 120%;
     background: transparent;
