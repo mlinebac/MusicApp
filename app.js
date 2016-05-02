@@ -1,3 +1,4 @@
+/**Contributors: Alex Fresa, Hamilton Kirby, Matt Lineback, and Charles Williams*/
 (function () {
 	"use strict";
 

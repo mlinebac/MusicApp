@@ -1,3 +1,4 @@
+/**Contributors: Alex Fresa, Hamilton Kirby, Matt Lineback, and Charles Williams*/
 /**
    Modified by: Charles Williams
    Source: http://jsfiddle.net/arunpjohny/rxs8xfLn/1/
